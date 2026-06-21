@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <title>Страница товара</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__large">
+                <div class="header__left-wrapper">
+                    <a href="../index.html" class="header__logo">
+                        <img src="../img/header/logo.svg" alt="LOGO">
+                        <span class="text-6">Лаборатория игр</span>
+                    </a>
+                </div>
+                <div class="header__right-wrapper">
+                    <span class="header__phone text-6">8-(000)-000-00-00 МСК (9-21)</span>
+                    <form id="search" class="header__search search">
+                        <input type="text" name="searchbar" id="searchbar" placeholder="Поиск по сайту....">
+                        <label for="search-submit">
+                            <img src="../img/header/search.svg" alt="SEARCH">
+                            <input type="submit" name="search-submit" id="search-submit">
+                        </label>
+                    </form>
+                    <a href="#" class="header__button">
+                        <img src="../img/header/cart.svg" alt="BUTTON">
+                    </a>
+                    <a href="#" class="header__button">
+                        <img src="../img/header/profile.svg" alt="BUTTON">
+                    </a>
+                </div>
+            </div>
+            <div class="header__small">
+                <a href="#" class="header__button header__button_small">
+                    <img src="../img/header/cart.svg" alt="BUTTON">
+                </a>
+                <a href="../index.html" class="header__logo header__logo_small">
+                    <img src="../img/header/logo.svg" alt="LOGO">
+                    <span class="text-6">Лаборатория игр</span>
+                </a>
+                <a href="#" class="header__button header__button_small">
+                    <img src="../img/header/burger.svg" alt="BUTTON">
+                </a>
+            </div>
+        </div>
+    </header>
+    <nav class="nav">
+        <div class="container">
+            <span class="header__phone text-6">8-(000)-000-00-00 МСК (9-21)</span>
+            <a href="./catalogue.html" class="header__link block-text">Каталог</a>
+            <a href="#" class="header__link block-text">Акции</a>
+            <a href="#" class="header__link block-text">Отзывы</a>
+            <a href="#" class="header__link block-text">Доставка и оплата</a>
+            <a href="./about.html" class="header__link block-text">О компании</a>
+        </div>
+    </nav>
+
+    <main class="main">
+        <section class="product">
+            <div class="container">
+                <div class="product-card">
+                    <div class="product-card__left">
+                        <div class="product-card__big-img">
+                            <span class="catalogue-entry__age button-text">возраст: 6+</span>
+                            <img src="../img/product/preview.jpg" alt="PREVIEW">
+                        </div>
+                        <div class="product-card__small-imgs">
+                            <button class="product-card__side-btn">
+                                <img src="../img/product/arrow.svg" alt="ARROW">
+                            </button>
+                            <div class="product-card__small-img">
+                                <img src="../img/catalogue/preview.jpg" alt="PREVIEW">
+                            </div>
+                            <div class="product-card__small-img">
+                                <img src="../img/catalogue/preview.jpg" alt="PREVIEW">
+                            </div>
+                            <div class="product-card__small-img">
+                                <img src="../img/catalogue/preview.jpg" alt="PREVIEW">
+                            </div>
+                            <button class="product-card__side-btn product-card__side-btn_reverse">
+                                <img src="../img/product/arrow.svg" alt="ARROW">
+                            </button>
+                        </div>
+                    </div>
+                    <h1 class="text-4">Настольная игра “Сказочное королевство” с дополненной...</h1>
+                    <div class="product-card__right">
+                        <div class="product-card__rating">
+                            <span><span class="product-card__final-rating">5</span>/5</span>
+                            <div class="product-card__stars">
+                                <img src="../img/product/star.svg" alt="STAR">
+                                <img src="../img/product/star.svg" alt="STAR">
+                                <img src="../img/product/star.svg" alt="STAR">
+                                <img src="../img/product/star.svg" alt="STAR">
+                                <img src="../img/product/star.svg" alt="STAR">
+                            </div>
+                        </div>
+                        <ul class="product-card__properties catalogue-entry__properties">
+                            <li>
+                                <img src="../img/catalogue/hourglass.svg" alt="PROPERTY">
+                                <span class="block-text">Время игры: 60-90 мин</span>
+                            </li>
+                            <li>
+                                <img src="../img/catalogue/grin.svg" alt="PROPERTY">
+                                <span class="block-text">Кол-во игроков: 2-6</span>
+                            </li>
+                            <li>
+                                <img src="../img/catalogue/history.svg" alt="PROPERTY">
+                                <span class="block-text">Подготовка: 0 мин</span>
+                            </li>
+                            <li>
+                                <img src="../img/catalogue/basketball.svg" alt="PROPERTY">
+                                <span class="block-text">Места: любые</span>
+                            </li>
+                            <li>
+                                <img src="../img/catalogue/brain.svg" alt="PROPERTY">
+                                <span class="block-text">Сложность: простая</span>
+                            </li>
+                        </ul>
+                        <p class="product-card__article block-text">Артикул: 00980</p>
+                        <div class="product-card__price">
+                            <input type="number" value="1">
+                            <p class="catalogue-entry__price text-5">3600₽</p>
+                        </div>
+                        <button class="yellow-button button-text">добавить в корзину</button>
+                    </div>
+                </div>
+
+                <div class="product-info">
+                    <h1 class="text-4">Информация о товаре</h1>
+                    <div class="product-info__card">
+                        <div class="product-info__cats">
+                            <button class="product-info__cat text-5">Описание</button>
+                            <button class="product-info__cat text-5">Детали</button>
+                            <button class="product-info__cat product-info__cat_active text-5">Отзывы (2)</button>
+                            <button class="product-info__cat text-5">Вопрос-ответ</button>
+                        </div>
+                        <div class="product-info__feedback">
+                            <div class="product-info__entry">
+                                <div class="product-info__entry-top">
+                                    <img src="../img/product/pfp.svg" alt="PFP" class="product-info__pfp">
+                                    <div class="product-info__top-right">
+                                        <h2 class="text-5">Ирина Е.</h2>
+                                        <time datetime="2020-09-10" class="block-text">10-09-20</time>
+                                        <div class="product-card__rating">
+                                            <span><span class="product-card__final-rating">5</span>/5</span>
+                                            <div class="product-card__stars">
+                                                <img src="../img/product/star.svg" alt="STAR">
+                                                <img src="../img/product/star.svg" alt="STAR">
+                                                <img src="../img/product/star.svg" alt="STAR">
+                                                <img src="../img/product/star.svg" alt="STAR">
+                                                <img src="../img/product/star.svg" alt="STAR">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="product-info__entry-content">
+                                    Советую всем мамочкам и папочкам! Первый квест, который мы выбрали - Загадки
+                                    Египетских пирамид. Играли, размышляли всей семьей! Это было действителньо очень
+                                    занимательно!
+                                </p>
+                            </div>
+                            <div class="product-info__entry">
+                                <div class="product-info__entry-top">
+                                    <img src="../img/product/pfp.svg" alt="PFP" class="product-info__pfp">
+                                    <div class="product-info__top-right">
+                                        <h2 class="text-5">Ирина Е.</h2>
+                                        <time datetime="2020-09-10" class="block-text">10-09-20</time>
+                                        <div class="product-card__rating">
+                                            <span><span class="product-card__final-rating">5</span>/5</span>
+                                            <div class="product-card__stars">
+                                                <img src="../img/product/star.svg" alt="STAR">
+                                                <img src="../img/product/star.svg" alt="STAR">
+                                                <img src="../img/product/star.svg" alt="STAR">
+                                                <img src="../img/product/star.svg" alt="STAR">
+                                                <img src="../img/product/star.svg" alt="STAR">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="product-info__entry-content">
+                                    Советую всем мамочкам и папочкам! Первый квест, который мы выбрали - Загадки
+                                    Египетских пирамид. Играли, размышляли всей семьей! Это было действителньо очень
+                                    занимательно!
+                                </p>
+                            </div>
+                            <button class="product-info__button button-text">оставить отзыв</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__top">
+            <div class="container">
+                <div class="footer__top-left">
+                    <a href="../index.html" class="footer__logo"><img src="../img/header/logo.svg" alt="LOGO"></a>
+                    <div class="footer__info">
+                        <p class="text-6">8(000) 000 00 00 МСК (9-21)</p>
+                        <p class="text-6">pchelkashop.ru@mail.ru</p>
+                    </div>
+                    <form id="footer-search" class="footer__search search">
+                        <input type="text" name="footer-searchbar" id="footer-searchbar"
+                            placeholder="Поиск по сайту....">
+                        <label for="footer-search-submit">
+                            <img src="../img/header/search.svg" alt="SEARCH">
+                            <input type="submit" name="footer-search-submit" id="footer-search-submit">
+                        </label>
+                    </form>
+                </div>
+                <div class="footer__top-right">
+                    <ul class="footer__links">
+                        <li>
+                            <a href="#" class="block-text">Акции и новости</a>
+                        </li>
+                        <li>
+                            <a href="#" class="block-text">Игры для праздника</a>
+                        </li>
+                        <li>
+                            <a href="#" class="block-text">Развивающие игры</a>
+                        </li>
+                        <li>
+                            <a href="#" class="block-text">Игры в дорогу</a>
+                        </li>
+                    </ul>
+                    <ul class="footer__links">
+                        <li>
+                            <a href="#" class="block-text">Отзывы</a>
+                        </li>
+                        <li>
+                            <a href="#" class="block-text">Доставка и оплата</a>
+                        </li>
+                        <li>
+                            <a href="#" class="block-text">Возврат</a>
+                        </li>
+                        <li>
+                            <a href="./about.html" class="block-text">О нас</a>
+                        </li>
+                        <li>
+                            <a href="#" class="block-text">Контакты</a>
+                        </li>
+                        <li>
+                            <a href="#" class="block-text">Документы</a>
+                        </li>
+                    </ul>
+                    <ul class="footer__links">
+                        <li>
+                            <a href="#" class="block-text">Личный кабинет</a>
+                        </li>
+                        <li>
+                            <a href="#" class="block-text">Партнерам</a>
+                        </li>
+                        <li>
+                            <a href="#" class="block-text">Групповой заказ</a>
+                        </li>
+                        <li>
+                            <a href="#" class="block-text">Постоянный покупатель</a>
+                        </li>
+                    </ul>
+                    <div class="footer__socials socials socials_small">
+                        <a href="#">
+                            <img src="../img/opener/instagram.svg" alt="SOCIAL">
+                        </a>
+                        <a href="#">
+                            <img src="../img/opener/whatsapp.svg" alt="SOCIAL">
+                        </a>
+                        <a href="#">
+                            <img src="../img/opener/viber.svg" alt="SOCIAL">
+                        </a>
+                        <a href="#">
+                            <img src="../img/opener/telegram.svg" alt="SOCIAL">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="container">
+                <div class="footer__bottom-left">
+                    <a href="#" class="block-text">Политика конфиденциальности</a>
+                    <a href="#" class="block-text">Публичная оферта</a>
+                </div>
+                <p class="block-text">Все права защищены 2026</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

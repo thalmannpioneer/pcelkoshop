@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <title>Каталог</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__large">
+                <div class="header__left-wrapper">
+                    <a href="../index.html" class="header__logo">
+                        <img src="../img/header/logo.svg" alt="LOGO">
+                        <span class="text-6">Лаборатория игр</span>
+                    </a>
+                </div>
+                <div class="header__right-wrapper">
+                    <span class="header__phone text-6">8-(000)-000-00-00 МСК (9-21)</span>
+                    <form id="search" class="header__search search">
+                        <input type="text" name="searchbar" id="searchbar" placeholder="Поиск по сайту....">
+                        <label for="search-submit">
+                            <img src="../img/header/search.svg" alt="SEARCH">
+                            <input type="submit" name="search-submit" id="search-submit">
+                        </label>
+                    </form>
+                    <a href="#" class="header__button">
+                        <img src="../img/header/cart.svg" alt="BUTTON">
+                    </a>
+                    <a href="#" class="header__button">
+                        <img src="../img/header/profile.svg" alt="BUTTON">
+                    </a>
+                </div>
+            </div>
+            <div class="header__small">
+                <a href="#" class="header__button header__button_small">
+                    <img src="../img/header/cart.svg" alt="BUTTON">
+                </a>
+                <a href="../index.html" class="header__logo header__logo_small">
+                    <img src="../img/header/logo.svg" alt="LOGO">
+                    <span class="text-6">Лаборатория игр</span>
+                </a>
+                <a href="#" class="header__button header__button_small">
+                    <img src="../img/header/burger.svg" alt="BUTTON">
+                </a>
+            </div>
+        </div>
+    </header>
+    <nav class="nav">
+        <div class="container">
+            <span class="header__phone text-6">8-(000)-000-00-00 МСК (9-21)</span>
+            <a href="#" class="header__link block-text">Каталог</a>
+            <a href="#" class="header__link block-text">Акции</a>
+            <a href="#" class="header__link block-text">Отзывы</a>
+            <a href="#" class="header__link block-text">Доставка и оплата</a>
+            <a href="./about.html" class="header__link block-text">О компании</a>
+        </div>
+    </nav>
+
+    <main class="main">
+        <section class="main__catalogue catalogue">
+            <div class="container">
+                <h1 class="text-2">Каталог игр</h1>
+                <div class="catalogue__wrapper">
+                    <div class="catalogue__left">
+                        <h2 class="text-5">Фильтр</h2>
+                        <input type="reset" id="search-reset" name="search-reset" form="cat-search" class="block-text"
+                            value="Очистить">
+                        <div class="catalogue__filter-category">
+                            <h3 class="text-6">Цена</h3>
+                            <div class="catalogue__range">
+                                <div class="catalogue__input-wrapper">
+                                    <label for="price-start" class="block-text">От</label>
+                                    <input type="number" id="price-start" name="price-start" form="cat-search">
+                                </div>
+                                <span class="block-text">-</span>
+                                <div class="catalogue__input-wrapper">
+                                    <label for="price-end" class="block-text">До</label>
+                                    <input type="number" id="price-end" name="price-end" form="cat-search">
+                                </div>
+                            </div>
+                            <input type="range" id="price-range" name="price-range" form="cat-search" min="600"
+                                max="3600" value="800" step="100">
+                        </div>
+                        <div class="catalogue__filter-category">
+                            <h3 class="text-6">Возраст</h3>
+                            <div class="catalogue__range">
+                                <div class="catalogue__input-wrapper">
+                                    <label for="age-start" class="block-text">От</label>
+                                    <input type="number" id="age-start" name="age-start" form="cat-search">
+                                </div>
+                                <span class="block-text">-</span>
+                                <div class="catalogue__input-wrapper">
+                                    <label for="age-end" class="block-text">До</label>
+                                    <input type="number" id="age-end" name="age-end" form="cat-search">
+                                </div>
+                            </div>
+                            <input type="range" id="age-range" name="age-range" form="cat-search" min="4" max="12"
+                                value="11" step="1">
+                        </div>
+                        <div class="catalogue__filter-category">
+                            <h3 class="text-6">Сложность</h3>
+                            <div class="catalogue__checkboxes">
+                                <div class="catalogue__checkbox">
+                                    <input type="checkbox" id="diff-easy" name="diff-easy" value="diff-easy"
+                                        form="cat-search">
+                                    <label for="diff-easy" class="block-text">Простая</label>
+                                </div>
+                                <div class="catalogue__checkbox">
+                                    <input type="checkbox" id="diff-normal" name="diff-normal" value="diff-normal"
+                                        form="cat-search">
+                                    <label for="diff-normal" class="block-text">Средняя</label>
+                                </div>
+                                <div class="catalogue__checkbox">
+                                    <input type="checkbox" id="diff-hard" name="diff-hard" value="diff-hard"
+                                        form="cat-search">
+                                    <label for="diff-hard" class="block-text">Усложненная</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="catalogue__filter-category">
+                            <h3 class="text-6">Категория</h3>
+                            <div class="catalogue__checkboxes">
+                                <div class="catalogue__checkbox">
+                                    <input type="checkbox" id="for-holidays" name="for-holidays" value="for-holidays"
+                                        form="cat-search">
+                                    <label for="for-holidays" class="block-text">Для праздника</label>
+                                </div>
+                                <div class="catalogue__checkbox">
+                                    <input type="checkbox" id="development" name="development" value="development"
+                                        form="cat-search">
+                                    <label for="development" class="block-text">Развивающие</label>
+                                </div>
+                                <div class="catalogue__checkbox">
+                                    <input type="checkbox" id="for-road" name="for-road" value="for-road"
+                                        form="cat-search">
+                                    <label for="for-road" class="block-text">В дорогу</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="catalogue__filter-category">
+                            <h3 class="text-6">Количество игроков</h3>
+                            <div class="catalogue__range">
+                                <div class="catalogue__input-wrapper">
+                                    <label for="players-start" class="block-text">От</label>
+                                    <input type="number" id="players-start" name="players-start" form="cat-search">
+                                </div>
+                                <span class="block-text">-</span>
+                                <div class="catalogue__input-wrapper">
+                                    <label for="players-end" class="block-text">До</label>
+                                    <input type="number" id="players-end" name="players-end" form="cat-search">
+                                </div>
+                            </div>
+                            <input type="range" id="players-range" name="players-range" form="cat-search" min="2"
+                                max="6" value="5" step="1">
+                        </div>
+                    </div>
+                    <div class="catalogue__right">
+                        <div class="catalogue__top-right">
+                            <form id="cat-search" class="catalogue__search search">
+                                <input type="text" name="cat-searchbar" id="cat-searchbar"
+                                    placeholder="Введите название или артикул...">
+                                <label for="cat-search-submit">
+                                    <img src="../img/header/search.svg" alt="SEARCH">
+                                    <input type="submit" name="cat-search-submit" id="cat-search-submit">
+                                </label>
+                            </form>
+                            <select name="sorting" id="sorting" class="block-text">
+                                <option value="popular">Сначала: популярные</option>
+                                <option value="new">Сначала: новые</option>
+                            </select>
+                        </div>
+                        <div class="catalogue__entries">
+                            <div class="catalogue-entry">
+                                <div class="catalogue-entry__preview">
+                                    <img src="../img/catalogue/preview.jpg" alt="PREVIEW">
+                                    <span class="catalogue-entry__age button-text">возраст: 6+</span>
+                                </div>
+                                <h2 class="text-6">Настольная игра “Сказочное королевство” с дополненной...</h2>
+                                <ul class="catalogue-entry__properties">
+                                    <li>
+                                        <img src="../img/catalogue/hourglass.svg" alt="PROPERTY">
+                                        <span class="block-text">Время игры: 60-90 мин</span>
+                                    </li>
+                                    <li>
+                                        <img src="../img/catalogue/grin.svg" alt="PROPERTY">
+                                        <span class="block-text">Кол-во игроков: 2-6</span>
+                                    </li>
+                                    <li>
+                                        <img src="../img/catalogue/history.svg" alt="PROPERTY">
+                                        <span class="block-text">Подготовка: 0 мин</span>
+                                    </li>
+                                    <li>
+                                        <img src="../img/catalogue/basketball.svg" alt="PROPERTY">
+                                        <span class="block-text">Места: любые</span>
+                                    </li>
+                                    <li>
+                                        <img src="../img/catalogue/brain.svg" alt="PROPERTY">
+                                        <span class="block-text">Сложность: простая</span>
+                                    </li>
+                                </ul>
+                                <p class="catalogue-entry__price text-5">3600₽</p>
+                                <a href="./product.html" class="yellow-button button-text">добавить в корзину</a>
+                            </div>
+                            <div class="catalogue-entry">
+                                <div class="catalogue-entry__preview">
+                                    <img src="../img/catalogue/preview.jpg" alt="PREVIEW">
+                                    <span class="catalogue-entry__age button-text">возраст: 6+</span>
+                                </div>
+                                <h2 class="text-6">Настольная игра “Сказочное королевство” с дополненной...</h2>
+                                <ul class="catalogue-entry__properties">
+                                    <li>
+                                        <img src="../img/catalogue/hourglass.svg" alt="PROPERTY">
+                                        <span class="block-text">Время игры: 60-90 мин</span>
+                                    </li>
+                                    <li>
+                                        <img src="../img/catalogue/grin.svg" alt="PROPERTY">
+                                        <span class="block-text">Кол-во игроков: 2-6</span>
+                                    </li>
+                                    <li>
+                                        <img src="../img/catalogue/history.svg" alt="PROPERTY">
+                                        <span class="block-text">Подготовка: 0 мин</span>
+                                    </li>
+                                    <li>
+                                        <img src="../img/catalogue/basketball.svg" alt="PROPERTY">
+                                        <span class="block-text">Места: любые</span>
+                                    </li>
+                                    <li>
+                                        <img src="../img/catalogue/brain.svg" alt="PROPERTY">
+                                        <span class="block-text">Сложность: простая</span>
+                                    </li>
+                                </ul>
+                                <p class="catalogue-entry__price text-5">3600₽</p>
+                                <a href="./product.html" class="yellow-button button-text">добавить в корзину</a>
+                            </div>
+                            <div class="catalogue-entry">
+                                <div class="catalogue-entry__preview">
+                                    <img src="../img/catalogue/preview.jpg" alt="PREVIEW">
+                                    <span class="catalogue-entry__age button-text">возраст: 6+</span>
+                                </div>
+                                <h2 class="text-6">Настольная игра “Сказочное королевство” с дополненной...</h2>
+                                <ul class="catalogue-entry__properties">
+                                    <li>
+                                        <img src="../img/catalogue/hourglass.svg" alt="PROPERTY">
+                                        <span class="block-text">Время игры: 60-90 мин</span>
+                                    </li>
+                                    <li>
+                                        <img src="../img/catalogue/grin.svg" alt="PROPERTY">
+                                        <span class="block-text">Кол-во игроков: 2-6</span>
+                                    </li>
+                                    <li>
+                                        <img src="../img/catalogue/history.svg" alt="PROPERTY">
+                                        <span class="block-text">Подготовка: 0 мин</span>
+                                    </li>
+                                    <li>
+                                        <img src="../img/catalogue/basketball.svg" alt="PROPERTY">
+                                        <span class="block-text">Места: любые</span>
+                                    </li>
+                                    <li>
+                                        <img src="../img/catalogue/brain.svg" alt="PROPERTY">
+                                        <span class="block-text">Сложность: простая</span>
+                                    </li>
+                                </ul>
+                                <p class="catalogue-entry__price text-5">3600₽</p>
+                                <a href="./product.html" class="yellow-button button-text">добавить в корзину</a>
+                            </div>
+                            <div class="catalogue-entry">
+                                <div class="catalogue-entry__preview">
+                                    <img src="../img/catalogue/preview.jpg" alt="PREVIEW">
+                                    <span class="catalogue-entry__age button-text">возраст: 6+</span>
+                                </div>
+                                <h2 class="text-6">Настольная игра “Сказочное королевство” с дополненной...</h2>
+                                <ul class="catalogue-entry__properties">
+                                    <li>
+                                        <img src="../img/catalogue/hourglass.svg" alt="PROPERTY">
+                                        <span class="block-text">Время игры: 60-90 мин</span>
+                                    </li>
+                                    <li>
+                                        <img src="../img/catalogue/grin.svg" alt="PROPERTY">
+                                        <span class="block-text">Кол-во игроков: 2-6</span>
+                                    </li>
+                                    <li>
+                                        <img src="../img/catalogue/history.svg" alt="PROPERTY">
+                                        <span class="block-text">Подготовка: 0 мин</span>
+                                    </li>
+                                    <li>
+                                        <img src="../img/catalogue/basketball.svg" alt="PROPERTY">
+                                        <span class="block-text">Места: любые</span>
+                                    </li>
+                                    <li>
+                                        <img src="../img/catalogue/brain.svg" alt="PROPERTY">
+                                        <span class="block-text">Сложность: простая</span>
+                                    </li>
+                                </ul>
+                                <p class="catalogue-entry__price text-5">3600₽</p>
+                                <a href="./product.html" class="yellow-button button-text">добавить в корзину</a>
+                            </div>
+                            <div class="catalogue-entry">
+                                <div class="catalogue-entry__preview">
+                                    <img src="../img/catalogue/preview.jpg" alt="PREVIEW">
+                                    <span class="catalogue-entry__age button-text">возраст: 6+</span>
+                                </div>
+                                <h2 class="text-6">Настольная игра “Сказочное королевство” с дополненной...</h2>
+                                <ul class="catalogue-entry__properties">
+                                    <li>
+                                        <img src="../img/catalogue/hourglass.svg" alt="PROPERTY">
+                                        <span class="block-text">Время игры: 60-90 мин</span>
+                                    </li>
+                                    <li>
+                                        <img src="../img/catalogue/grin.svg" alt="PROPERTY">
+                                        <span class="block-text">Кол-во игроков: 2-6</span>
+                                    </li>
+                                    <li>
+                                        <img src="../img/catalogue/history.svg" alt="PROPERTY">
+                                        <span class="block-text">Подготовка: 0 мин</span>
+                                    </li>
+                                    <li>
+                                        <img src="../img/catalogue/basketball.svg" alt="PROPERTY">
+                                        <span class="block-text">Места: любые</span>
+                                    </li>
+                                    <li>
+                                        <img src="../img/catalogue/brain.svg" alt="PROPERTY">
+                                        <span class="block-text">Сложность: простая</span>
+                                    </li>
+                                </ul>
+                                <p class="catalogue-entry__price text-5">3600₽</p>
+                                <a href="./product.html" class="yellow-button button-text">добавить в корзину</a>
+                            </div>
+                            <div class="catalogue-entry">
+                                <div class="catalogue-entry__preview">
+                                    <img src="../img/catalogue/preview.jpg" alt="PREVIEW">
+                                    <span class="catalogue-entry__age button-text">возраст: 6+</span>
+                                </div>
+                                <h2 class="text-6">Настольная игра “Сказочное королевство” с дополненной...</h2>
+                                <ul class="catalogue-entry__properties">
+                                    <li>
+                                        <img src="../img/catalogue/hourglass.svg" alt="PROPERTY">
+                                        <span class="block-text">Время игры: 60-90 мин</span>
+                                    </li>
+                                    <li>
+                                        <img src="../img/catalogue/grin.svg" alt="PROPERTY">
+                                        <span class="block-text">Кол-во игроков: 2-6</span>
+                                    </li>
+                                    <li>
+                                        <img src="../img/catalogue/history.svg" alt="PROPERTY">
+                                        <span class="block-text">Подготовка: 0 мин</span>
+                                    </li>
+                                    <li>
+                                        <img src="../img/catalogue/basketball.svg" alt="PROPERTY">
+                                        <span class="block-text">Места: любые</span>
+                                    </li>
+                                    <li>
+                                        <img src="../img/catalogue/brain.svg" alt="PROPERTY">
+                                        <span class="block-text">Сложность: простая</span>
+                                    </li>
+                                </ul>
+                                <p class="catalogue-entry__price text-5">3600₽</p>
+                                <a href="./product.html" class="yellow-button button-text">добавить в корзину</a>
+                            </div>
+                            <div class="catalogue-entry">
+                                <div class="catalogue-entry__preview">
+                                    <img src="../img/catalogue/preview.jpg" alt="PREVIEW">
+                                    <span class="catalogue-entry__age button-text">возраст: 6+</span>
+                                </div>
+                                <h2 class="text-6">Настольная игра “Сказочное королевство” с дополненной...</h2>
+                                <ul class="catalogue-entry__properties">
+                                    <li>
+                                        <img src="../img/catalogue/hourglass.svg" alt="PROPERTY">
+                                        <span class="block-text">Время игры: 60-90 мин</span>
+                                    </li>
+                                    <li>
+                                        <img src="../img/catalogue/grin.svg" alt="PROPERTY">
+                                        <span class="block-text">Кол-во игроков: 2-6</span>
+                                    </li>
+                                    <li>
+                                        <img src="../img/catalogue/history.svg" alt="PROPERTY">
+                                        <span class="block-text">Подготовка: 0 мин</span>
+                                    </li>
+                                    <li>
+                                        <img src="../img/catalogue/basketball.svg" alt="PROPERTY">
+                                        <span class="block-text">Места: любые</span>
+                                    </li>
+                                    <li>
+                                        <img src="../img/catalogue/brain.svg" alt="PROPERTY">
+                                        <span class="block-text">Сложность: простая</span>
+                                    </li>
+                                </ul>
+                                <p class="catalogue-entry__price text-5">3600₽</p>
+                                <a href="./product.html" class="yellow-button button-text">добавить в корзину</a>
+                            </div>
+                            <div class="catalogue-entry">
+                                <div class="catalogue-entry__preview">
+                                    <img src="../img/catalogue/preview.jpg" alt="PREVIEW">
+                                    <span class="catalogue-entry__age button-text">возраст: 6+</span>
+                                </div>
+                                <h2 class="text-6">Настольная игра “Сказочное королевство” с дополненной...</h2>
+                                <ul class="catalogue-entry__properties">
+                                    <li>
+                                        <img src="../img/catalogue/hourglass.svg" alt="PROPERTY">
+                                        <span class="block-text">Время игры: 60-90 мин</span>
+                                    </li>
+                                    <li>
+                                        <img src="../img/catalogue/grin.svg" alt="PROPERTY">
+                                        <span class="block-text">Кол-во игроков: 2-6</span>
+                                    </li>
+                                    <li>
+                                        <img src="../img/catalogue/history.svg" alt="PROPERTY">
+                                        <span class="block-text">Подготовка: 0 мин</span>
+                                    </li>
+                                    <li>
+                                        <img src="../img/catalogue/basketball.svg" alt="PROPERTY">
+                                        <span class="block-text">Места: любые</span>
+                                    </li>
+                                    <li>
+                                        <img src="../img/catalogue/brain.svg" alt="PROPERTY">
+                                        <span class="block-text">Сложность: простая</span>
+                                    </li>
+                                </ul>
+                                <p class="catalogue-entry__price text-5">3600₽</p>
+                                <a href="./product.html" class="yellow-button button-text">добавить в корзину</a>
+                            </div>
+                            <div class="catalogue-entry">
+                                <div class="catalogue-entry__preview">
+                                    <img src="../img/catalogue/preview.jpg" alt="PREVIEW">
+                                    <span class="catalogue-entry__age button-text">возраст: 6+</span>
+                                </div>
+                                <h2 class="text-6">Настольная игра “Сказочное королевство” с дополненной...</h2>
+                                <ul class="catalogue-entry__properties">
+                                    <li>
+                                        <img src="../img/catalogue/hourglass.svg" alt="PROPERTY">
+                                        <span class="block-text">Время игры: 60-90 мин</span>
+                                    </li>
+                                    <li>
+                                        <img src="../img/catalogue/grin.svg" alt="PROPERTY">
+                                        <span class="block-text">Кол-во игроков: 2-6</span>
+                                    </li>
+                                    <li>
+                                        <img src="../img/catalogue/history.svg" alt="PROPERTY">
+                                        <span class="block-text">Подготовка: 0 мин</span>
+                                    </li>
+                                    <li>
+                                        <img src="../img/catalogue/basketball.svg" alt="PROPERTY">
+                                        <span class="block-text">Места: любые</span>
+                                    </li>
+                                    <li>
+                                        <img src="../img/catalogue/brain.svg" alt="PROPERTY">
+                                        <span class="block-text">Сложность: простая</span>
+                                    </li>
+                                </ul>
+                                <p class="catalogue-entry__price text-5">3600₽</p>
+                                <a href="./product.html" class="yellow-button button-text">добавить в корзину</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__top">
+            <div class="container">
+                <div class="footer__top-left">
+                    <a href="../index.html" class="footer__logo"><img src="../img/header/logo.svg" alt="LOGO"></a>
+                    <div class="footer__info">
+                        <p class="text-6">8(000) 000 00 00 МСК (9-21)</p>
+                        <p class="text-6">pchelkashop.ru@mail.ru</p>
+                    </div>
+                    <form id="footer-search" class="footer__search search">
+                        <input type="text" name="footer-searchbar" id="footer-searchbar"
+                            placeholder="Поиск по сайту....">
+                        <label for="footer-search-submit">
+                            <img src="../img/header/search.svg" alt="SEARCH">
+                            <input type="submit" name="footer-search-submit" id="footer-search-submit">
+                        </label>
+                    </form>
+                </div>
+                <div class="footer__top-right">
+                    <ul class="footer__links">
+                        <li>
+                            <a href="#" class="block-text">Акции и новости</a>
+                        </li>
+                        <li>
+                            <a href="#" class="block-text">Игры для праздника</a>
+                        </li>
+                        <li>
+                            <a href="#" class="block-text">Развивающие игры</a>
+                        </li>
+                        <li>
+                            <a href="#" class="block-text">Игры в дорогу</a>
+                        </li>
+                    </ul>
+                    <ul class="footer__links">
+                        <li>
+                            <a href="#" class="block-text">Отзывы</a>
+                        </li>
+                        <li>
+                            <a href="#" class="block-text">Доставка и оплата</a>
+                        </li>
+                        <li>
+                            <a href="#" class="block-text">Возврат</a>
+                        </li>
+                        <li>
+                            <a href="./about.html" class="block-text">О нас</a>
+                        </li>
+                        <li>
+                            <a href="#" class="block-text">Контакты</a>
+                        </li>
+                        <li>
+                            <a href="#" class="block-text">Документы</a>
+                        </li>
+                    </ul>
+                    <ul class="footer__links">
+                        <li>
+                            <a href="#" class="block-text">Личный кабинет</a>
+                        </li>
+                        <li>
+                            <a href="#" class="block-text">Партнерам</a>
+                        </li>
+                        <li>
+                            <a href="#" class="block-text">Групповой заказ</a>
+                        </li>
+                        <li>
+                            <a href="#" class="block-text">Постоянный покупатель</a>
+                        </li>
+                    </ul>
+                    <div class="footer__socials socials socials_small">
+                        <a href="#">
+                            <img src="../img/opener/instagram.svg" alt="SOCIAL">
+                        </a>
+                        <a href="#">
+                            <img src="../img/opener/whatsapp.svg" alt="SOCIAL">
+                        </a>
+                        <a href="#">
+                            <img src="../img/opener/viber.svg" alt="SOCIAL">
+                        </a>
+                        <a href="#">
+                            <img src="../img/opener/telegram.svg" alt="SOCIAL">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="container">
+                <div class="footer__bottom-left">
+                    <a href="#" class="block-text">Политика конфиденциальности</a>
+                    <a href="#" class="block-text">Публичная оферта</a>
+                </div>
+                <p class="block-text">Все права защищены 2026</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,1032 @@
+//!Переменные
+$ORANGE1: #F2B236
+$ORANGE2: #FF9C1A
+$BROWN: #884900
+$LIGHTRED: #DB4E66
+$LIGHTRED_SHADOW: #f337576b
+$DARKGREY: #222528
+$GREY: #5B636B
+$LIGHTGREY: #A5AAAF
+$BLACK_SHADOW: #D3D3D3
+$YELLOW_SHADOW: #FFE9BF
+$CYAN: #90C1BF
+
+//!Шрифты
+
+@font-face
+    font-family: "Rubik"
+    font-style: normal
+    font-weight: 300
+    src: url("../fonts/Rubik-Light.woff2")
+@font-face
+    font-family: "Rubik"
+    font-style: italic
+    font-weight: 300
+    src: url("../fonts/Rubik-LightItalic.woff2")
+
+@font-face
+    font-family: "Rubik"
+    font-style: normal
+    font-weight: 400
+    src: url("../fonts/Rubik-Regular.woff2")
+@font-face
+    font-family: "Rubik"
+    font-style: italic
+    font-weight: 400
+    src: url("../fonts/Rubik-Italic.woff2")
+
+@font-face
+    font-family: "Rubik"
+    font-style: normal
+    font-weight: 500
+    src: url("../fonts/Rubik-Medium.woff2")
+@font-face
+    font-family: "Rubik"
+    font-style: italic
+    font-weight: 500
+    src: url("../fonts/Rubik-MediumItalic.woff2")
+
+@font-face
+    font-family: "Rubik"
+    font-style: normal
+    font-weight: 600
+    src: url("../fonts/Rubik-SemiBold.woff2")
+@font-face
+    font-family: "Rubik"
+    font-style: italic
+    font-weight: 600
+    src: url("../fonts/Rubik-SemiBoldItalic.woff2")
+
+@font-face
+    font-family: "Rubik"
+    font-style: normal
+    font-weight: 700
+    src: url("../fonts/Rubik-Bold.woff2")
+@font-face
+    font-family: "Rubik"
+    font-style: italic
+    font-weight: 700
+    src: url("../fonts/Rubik-BoldItalic.woff2")
+
+@font-face
+    font-family: "Rubik"
+    font-style: normal
+    font-weight: 800
+    src: url("../fonts/Rubik-ExtraBold.woff2")
+@font-face
+    font-family: "Rubik"
+    font-style: italic
+    font-weight: 800
+    src: url("../fonts/Rubik-ExtraBoldItalic.woff2")
+
+@font-face
+    font-family: "Rubik"
+    font-style: normal
+    font-weight: 900
+    src: url("../fonts/Rubik-Black.woff2")
+@font-face
+    font-family: "Rubik"
+    font-style: italic
+    font-weight: 900
+    src: url("../fonts/Rubik-BlackItalic.woff2")
+
+//!Общие стили
+
+*
+    box-sizing: border-box
+
+body
+    font-family: "Rubik"
+    line-height: 1.2
+
+a
+    color: black
+    text-decoration: none
+
+input
+    &[type=text]
+        background: none
+        border: none
+        outline: none
+    &[type=number]
+        background: none
+        border: none
+        outline: none
+    &[type=submit]
+        display: none
+    &[type=reset]
+        border: none
+        outline: none
+        background: none
+        cursor: pointer
+
+select
+    border: none
+    outline: none
+    background: none
+    appearance: none
+
+button
+    border: none
+    outline: none
+    background: none
+    cursor: pointer
+
+label
+    cursor: pointer
+
+h1
+    padding: 0
+    margin: 0
+
+.container
+    max-width: 1165px
+    margin: 0 auto
+
+.text-1
+    font-weight: 500
+    font-size: 50px
+.text-2
+    font-weight: 500
+    font-size: 44px
+.text-3
+    font-weight: 500
+    font-size: 38px
+.text-4
+    font-weight: 500
+    font-size: 30px
+.text-5
+    font-weight: 500
+    font-size: 24px
+.text-6
+    font-weight: 500
+    font-size: 18px
+
+.block-text
+    font-size: 16px
+    line-height: 1.6
+
+.button-text
+    font-weight: 500
+    font-size: 16px
+
+.search
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 10px 20px
+    border-radius: 26px
+    background: white
+    input[type=text]
+        width: calc(100% - 24px)
+        font-size: 16px
+
+.red-button
+    background: $LIGHTRED
+    border-radius: 14px
+    box-shadow: 2px 4px 9px 0 $LIGHTRED_SHADOW
+    color: white
+    text-transform: uppercase
+    padding: 18px 92px
+
+.yellow-button
+    background: $ORANGE1
+    padding: 18px 62px
+    border-radius: 14px
+    box-shadow: 0 3px 7px 0 $YELLOW_SHADOW
+    text-align: center
+    text-transform: uppercase
+    color: white
+
+.socials
+    display: flex
+    column-gap: 24px
+    &_small
+        column-gap: 17px
+        img
+            width: 37px
+
+//!Стили разделов
+
+.header
+    background-image: linear-gradient(66deg, $ORANGE1, $ORANGE2)
+    &__large
+        height: 144px
+        display: flex
+        align-items: center
+        justify-content: space-between
+    &__small
+        display: none
+    &__logo
+        display: flex
+        flex-direction: column
+        row-gap: 4px
+        color: white
+        img
+            width: 100%
+        &_small
+            width: 210px
+            align-items: center
+    &__right-wrapper
+        display: flex
+        align-items: center
+        column-gap: 25px
+    &__phone
+        color: $BROWN
+    &__search
+        width: 327px
+    &__button
+        img
+            width: 100%
+        &_small
+            width: 66px
+.nav
+    .container
+        height: 69px
+        display: flex
+        justify-content: flex-end
+        align-items: center
+        span
+            display: none
+        a
+            height: 70px
+            display: flex
+            align-items: center
+            justify-content: center
+            padding: 0 20px
+            transition: all .1s ease
+            &:hover
+                background: $ORANGE1
+                color: white
+
+.main
+    &__opener
+        margin-bottom: 48px
+    &__sales
+        margin-bottom: 82px
+    &__small-catalogue
+        padding: 80px 0 100px
+        margin-bottom: 82px
+        border-top: 1px solid $LIGHTGREY
+        border-bottom: 1px solid $LIGHTGREY
+    &__video
+        margin-bottom: 120px
+    &__upsides
+        margin-bottom: 120px
+    &__questions
+        margin-bottom: 100px
+
+.opener
+    height: 648px
+    background-image: url("../img/opener/bg.png")
+    background-size: cover
+    color: white
+    .container
+        height: 100%
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        position: relative
+    &__middle
+        display: flex
+        flex-direction: column
+        align-items: center
+        h1
+            text-align: center
+            max-width: 888px
+            margin-bottom: 16px
+        p
+            margin-bottom: 43px
+    &__socials
+        position: absolute
+        bottom: 40px
+        right: 0
+
+.sales
+    &__marking
+        color: $GREY
+        margin-bottom: 34px
+    &__entries
+        padding: 10px
+        width: calc(100% + (100vw - 100%) / 2)
+        display: flex
+        column-gap: 16px
+        overflow-x: auto
+.sales-entry
+    display: flex
+    column-gap: 18px
+    flex: 0 0 auto
+    width: 546px
+    height: 194px
+    border-radius: 14px
+    box-shadow: 0 4px 9px 0 $BLACK_SHADOW
+    padding: 36px
+    &:nth-child(2n)
+        .sales-entry__left-wrapper
+            background: $ORANGE1
+    &__left-wrapper
+        background: $CYAN
+        width: 118px
+        aspect-ratio: 1 / 1
+        color: white
+        border-radius: 10px
+        position: relative
+        display: flex
+        align-items: center
+        justify-content: center
+        span
+            &:first-child
+                position: absolute
+                top: 12px
+                right: 20px
+            &:last-child
+                position: absolute
+                bottom: 6px
+                left: 11px
+    &__right-wrapper
+        h2
+            margin-bottom: 19px
+            color: $LIGHTRED
+
+.small-catalogue
+    &__top
+        display: flex
+        justify-content: space-between
+        align-items: center
+        margin-bottom: 90px
+        a
+            color: $LIGHTRED
+            text-transform: uppercase
+    &__title
+        display: flex
+        flex-direction: column
+        row-gap: 16px
+        p
+            color: $GREY
+    &__entries
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        gap: 35px
+
+.catalogue-entry
+    display: flex
+    flex-direction: column
+    row-gap: 20px
+    padding: 25px
+    background: white
+    border-radius: 12px
+    box-shadow: 0 4px 9px 0 $BLACK_SHADOW
+    &__preview
+        position: relative
+        img
+            width: 100%
+    &__age
+        position: absolute
+        top: 0
+        right: 3px
+        padding: 3px 16px
+        border-radius: 6px
+        background: $CYAN
+        text-transform: uppercase
+        color: white
+    &__properties
+        li
+            display: flex
+            align-items: center
+            column-gap: 15px
+            color: $GREY
+    &__price
+        color: $LIGHTRED
+        text-align: center
+
+.video
+    height: 957px
+    width: 100%
+    background-image: url("../img/video/bg.svg")
+    background-size: 1941px 100%
+    display: flex
+    &__player
+        background: white
+        width: 765px
+        aspect-ratio: 16 / 9
+        border-radius: 8px
+        box-shadow: 2px 4px 9px 0 $LIGHTRED_SHADOW
+        display: flex
+        align-items: center
+        justify-content: center
+        margin: 326px auto 211px
+
+.upsides
+    h1
+        max-width: 700px
+        margin-bottom: 92px
+    &__entries
+        display: grid
+        grid-auto-flow: column
+        grid-template-rows: repeat(2, 1fr)
+        gap: 36px
+        margin-bottom: 56px
+    &__entry
+        display: flex
+        align-items: center
+        column-gap: 23px
+    &__entry-left
+        padding: 10px
+        border-radius: 14px
+        box-shadow: 0 4px 9px 0 $BLACK_SHADOW
+
+.questions
+    padding: 90px 0
+    border-top: 1px solid $LIGHTGREY
+    border-bottom: 1px solid $LIGHTGREY
+    h1
+        margin-bottom: 92px
+    &__list
+        display: flex
+        flex-direction: column
+        row-gap: 48px
+        margin-bottom: 80px
+        li
+            cursor: pointer
+            &::before
+                font-family: "Rubik"
+                content: "+"
+                font-size: 30px
+                font-weight: 500
+    &__question-desc
+        margin-left: 25px
+        overflow: hidden
+        &_hidden
+            height: 0
+
+.footer
+    &__top
+        height: 378px
+        padding: 58px 0 84px
+        background-image: linear-gradient(66deg, $ORANGE1, $ORANGE2)
+        .container
+            display: flex
+            justify-content: space-between
+            column-gap: 300px
+    &__top-left
+        width: 265px
+        display: flex
+        flex-direction: column
+        p
+            color: $BROWN
+            margin-bottom: 8px
+            &:last-of-type
+                margin-bottom: 45px
+    &__logo
+        margin-bottom: 16px
+        img
+            width: 265px
+    &__top-right
+        flex-grow: 1
+        height: 236px
+        width: fit-content
+        display: flex
+        column-gap: 50px
+        flex-direction: column
+        flex-wrap: wrap
+    &__links
+        display: flex
+        flex-direction: column
+        row-gap: 16px
+        a
+            color: white
+    &__socials
+        position: relative
+        left: -11px
+        margin-top: 40px
+    &__bottom
+        padding: 56px 0
+        background: $DARKGREY
+        color: white
+        .container
+            display: flex
+            justify-content: space-between
+    &__bottom-left
+        display: flex
+        column-gap: 53px
+        a
+            color: white
+
+.catalogue
+    margin: 90px 0 120px
+    padding: 70px 0 120px
+    border-top: 1px solid $LIGHTGREY
+    border-bottom: 1px solid $LIGHTGREY
+    h1
+        margin-bottom: 80px
+    &__wrapper
+        display: flex
+        column-gap: 40px
+    &__left
+        position: relative
+        flex-grow: 2
+        h2
+            margin-bottom: 35px
+            color: $LIGHTGREY
+        input[type=reset]
+            color: $GREY
+            position: absolute
+            top: 0
+            right: 0
+    &__filter-category
+        margin-bottom: 48px
+        h3
+            padding-bottom: 7px
+            border-bottom: 1px solid $LIGHTGREY
+            margin-bottom: 16px
+    &__range
+        display: flex
+        column-gap: 15px
+        align-items: flex-end
+        justify-content: flex-start
+        margin-bottom: 36px
+        color: $GREY
+    &__input-wrapper
+        display: flex
+        flex-direction: column
+        row-gap: 4px
+        input[type=number]
+            width: 80px
+            padding: 5px
+            border: 1px solid $LIGHTGREY
+            border-radius: 4px
+    &__checkboxes
+        display: flex
+        flex-direction: column
+        row-gap: 8px
+    &__checkbox
+        color: $GREY
+        display: flex
+        align-items: center
+        column-gap: 8px
+    &__right
+        flex-grow: 10
+        display: flex
+        flex-direction: column
+        row-gap: 100px
+    &__top-right
+        display: flex
+        justify-content: space-between
+    &__search
+        flex-grow: 0.4
+        border: 1px solid $LIGHTGREY
+    &__entries
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        gap: 35px
+    .yellow-button
+        padding-left: 0
+        padding-right: 0
+        width: 100%
+    select
+        padding: 14px 20px
+        border-radius: 26px
+        border: 1px solid $LIGHTGREY
+        color: $LIGHTRED
+
+.product
+    padding: 64px 0 120px
+    border-top: 1px solid $LIGHTGREY
+    border-bottom: 1px solid $LIGHTGREY
+    margin: 90px 0 120px
+.product-card
+    margin-bottom: 56px
+    padding: 24px
+    width: 100%
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    grid-template-areas: "l t" "l r" "l ."
+    column-gap: 35px
+    border-radius: 22px
+    box-shadow: 0 4px 9px 0 $BLACK_SHADOW
+    h1
+        grid-area: t
+        padding-bottom: 16px
+        border-bottom: 1px solid $LIGHTGREY
+        margin-bottom: 24px
+    &__left
+        grid-area: l
+        flex-grow: 1
+        display: flex
+        flex-direction: column
+        row-gap: 24px
+    &__big-img
+        position: relative
+        img
+            width: 100%
+    &__small-imgs
+        display: flex
+        align-items: center
+        column-gap: 6px
+    &__small-img
+        width: 100%
+        img
+            width: 100%
+    &__side-btn
+        &_reverse
+            img
+                transform: scaleX(-1)
+    &__right
+        grid-area: r
+    &__rating
+        display: flex
+        column-gap: 15px
+        align-items: flex-end
+        color: $ORANGE1
+        font-weight: 300
+        font-size: 21px
+        margin-bottom: 30px
+    &__final-rating
+        font-size: 36px
+    &__properties
+        margin-bottom: 24px
+    &__article
+        color: $LIGHTGREY
+        margin-bottom: 48px
+    &__price
+        column-gap: 36px
+        display: flex
+        height: fit-content
+        margin-bottom: 50px
+        align-items: center
+        input
+            width: 58px
+            border: 1px solid $LIGHTGREY
+            border-radius: 4px
+            padding: 10px
+.product-info
+    h1
+        color: $LIGHTGREY
+        margin-bottom: 32px
+    &__card
+        border-radius: 16px
+        border: 1px solid $LIGHTGREY
+        overflow: hidden
+    &__cats
+        border-bottom: 1px solid $LIGHTGREY
+    &__cat
+        padding: 15px 35px
+        transition: all .1s ease
+        &_active
+            background: $ORANGE1
+            color: white
+        &:hover
+            background: $ORANGE1
+            color: white
+    &__feedback
+        padding: 34px 40px
+        display: flex
+        flex-direction: column
+        row-gap: 16px
+        align-items: flex-start
+    &__entry
+        padding: 35px 24px
+        border-radius: 14px
+        box-shadow: 0 4px 9px 0 $BLACK_SHADOW
+        display: flex
+        flex-direction: column
+        row-gap: 26px
+    &__entry-top
+        display: flex
+        column-gap: 28px
+    &__top-right
+        display: flex
+        flex-direction: column
+        h2
+            margin-bottom: 10px
+        time
+            color: $LIGHTGREY
+            margin-bottom: 6px
+    &__button
+        text-transform: uppercase
+        color: $LIGHTRED
+        margin: 24px 0
+
+.about
+    padding: 84px 0 146px
+    margin: 100px 0
+    border-top: 1px solid $LIGHTGREY
+    border-bottom: 1px solid $LIGHTGREY
+    h1
+        margin-bottom: 80px
+    &__team
+        display: flex
+        flex-direction: column
+        align-items: center
+        text-align: center
+        h2
+            color: $LIGHTGREY
+            margin-bottom: 32px
+    &__team-members
+        margin: 64px 0 80px
+        padding-bottom: 80px
+        border-bottom: 1px solid $LIGHTGREY
+        display: flex
+        justify-content: space-between
+        align-items: flex-end
+        flex-wrap: wrap
+        row-gap: 50px
+    &__team-member
+        display: flex
+        align-items: center
+        flex-direction: column
+        row-gap: 25px
+        img
+            width: 322px
+            height: 319px
+        h3
+            color: $ORANGE1
+            max-width: 250px
+        p
+            font-size: 20px
+            font-style: italic
+            width: 364px
+            height: 96px
+        &_large
+            img
+                width: 360px
+                height: 357px
+    &__process
+        background-image: url("../img/about/bg.svg")
+        background-size: 100% 100%
+        height: 500px
+        .container
+            display: flex
+            justify-content: space-between
+            flex-wrap: wrap
+            row-gap: 30px
+    &__process-entry
+        display: flex
+        flex-direction: column
+        align-items: center
+        text-align: center
+        row-gap: 20px
+        img
+            width: 166px
+            height: 182px
+        h2
+            color: white
+            width: 265px
+        p
+            font-size: 20px
+            font-style: italic
+            width: 265px
+            height: 96px
+
+// Медиа запросы
+
+@media screen and ( max-width: 1439px )
+    .container
+        max-width: 660px
+
+    .yellow-button
+        padding: 20px 40px
+
+    .header
+        &__large
+            display: none
+        &__small
+            height: 144px
+            display: flex
+            justify-content: space-between
+            align-items: center
+    .nav
+        .container
+            justify-content: flex-start
+            span
+                display: inline
+            a
+                display: none
+
+    .opener
+        height: 927px
+        background-position: center
+        .container
+            align-items: flex-start
+        &__middle
+            align-items: flex-start
+            h1
+                text-align: left
+                max-width: 100%
+        &__socials
+            display: none
+
+    .sales
+        &__entries
+            padding: 0
+            width: 100%
+            flex-direction: column
+            row-gap: 16px
+            overflow-x: visible
+    .sales-entry
+        width: 100%
+
+    .small-catalogue
+        &__top
+            margin-bottom: 40px
+        &__entries
+            grid-template-columns: repeat(2, 1fr)
+
+    .catalogue-entry
+        &__preview
+            width: 100%
+            img
+                width: 100%
+
+    .video
+        height: 576px
+        background-size: 1170px 100%
+        background-position: center
+        &__player
+            width: 429px
+            margin: 186px auto 154px
+
+    .upsides
+        h1
+            max-width: 100%
+            margin-bottom: 48px
+        &__entries
+            grid-template-rows: repeat(4, 1fr)
+            gap: 24px
+
+    .footer
+        &__top
+            height: fit-content
+            padding: 50px 0 30px
+            .container
+                height: 100%
+                flex-direction: column
+        &__top-left
+            width: 100%
+            flex-direction: row
+            align-items: center
+            column-gap: 30px
+            margin-bottom: 30px
+            p:last-of-type
+                margin-bottom: 0
+        &__search
+            display: none
+        &__top-right
+            flex-direction: row
+        &__socials
+            display: none
+        &__bottom
+            p
+                display: none
+        &__bottom-left
+            width: 100%
+            justify-content: space-between
+
+    .catalogue
+        &__wrapper
+            width: 100%
+            column-gap: 30px
+        &__top-right
+            flex-direction: column
+            row-gap: 20px
+            align-items: flex-start
+        &__search
+            width: 100%
+        &__entries
+            grid-template-columns: 1fr
+
+    .product
+        padding: 0
+        border: none
+    .product-card
+        grid-template-areas: "t t" "l r"
+        h1
+            margin-bottom: 32px
+        &__rating
+            margin-bottom: 24px
+        &__article
+            margin-bottom: 38px
+        &__price
+            margin-bottom: 35px
+
+    .about
+        &__team-members
+            justify-content: center
+        &__team-member
+            img
+                width: 278px
+                height: 275px
+            p
+                width: 315px
+            &_large
+                img
+                    width: 315px
+                    height: 312px
+        &__process
+            background-size: 100% auto
+            background-repeat: no-repeat
+            background-position: bottom
+            height: auto
+            .container
+                :first-child, :nth-child(2)
+                    h2
+                        color: $ORANGE1
+
+@media screen and ( max-width: 767px )
+    .container
+        max-width: 335px
+
+    .button-text
+        font-size: 14px
+
+    .block-text
+        font-size: 15px
+
+    .text-1
+        font-size: 36px
+    .text-2
+        font-size: 32px
+    .text-5
+        font-size: 20px
+
+    .header
+        &__logo
+            display: none
+
+    .sales-entry
+        &__left-wrapper
+            display: none
+            width: 100%
+
+    .small-catalogue
+        &__entries
+            grid-template-columns: 1fr
+
+    .video
+        height: 449px
+        background-size: 910px 100%
+        background-position: 60%
+        &__player
+            width: 335px
+            margin: 159px auto 106px
+
+    .footer
+        &__top
+            height: fit-content
+            padding: 50px 0 30px
+            .container
+                height: 100%
+                flex-direction: column
+                align-items: center
+        &__top-left
+            width: 100%
+            flex-direction: column
+            align-items: center
+            column-gap: 30px
+            margin-bottom: 30px
+            p:last-of-type
+                margin-bottom: 0
+        &__info
+            display: flex
+            flex-direction: column
+            align-items: center
+        &__top-right
+            height: fit-content
+            flex-direction: column
+            row-gap: 40px
+        &__bottom-left
+            flex-direction: column
+            align-items: center
+            row-gap: 10px
+
+    .catalogue
+        &__wrapper
+            flex-direction: column
+            row-gap: 20px
+
+    .product-card
+        grid-template-columns: 1fr
+        grid-template-areas: "t" "l" "r"
+    .product-info
+        &__pfp
+            width: 80px
+        &__feedback
+            padding: 10px
+        &__entry
+            padding: 15px
+        .product-card__rating
+            column-gap: 6px
+        .product-card__stars
+            img
+                width: 21px
+
+    .about
+        &__team-members
+            flex-direction: column
+        &__process
+            background: none
+            .container
+                flex-direction: column
+                h2
+                    color: $ORANGE1
